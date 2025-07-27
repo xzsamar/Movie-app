@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Movie App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Movie App</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- Search Results -->
+        <div class="category-row" id="searchResultsContainer" style="display: none;">
+            <h2 class="category-title">Search Results</h2>
+            <div class="movie-row" id="searchResults"></div>
+        </div>
+
+        <!-- Category Rows -->
+        <div class="category-row">
+            <h2 class="category-title">Trending Now</h2>
+            <div class="movie-row" id="trendingRow"></div>
+        </div>
+
+        <div class="category-row">
+            <h2 class="category-title">Top Picks For You</h2>
+            <div class="movie-row" id="topPicksRow"></div>
+        </div>
+
+        <div class="category-row">
+            <h2 class="category-title">Action Movies</h2>
+            <div class="movie-row" id="actionRow"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Movie Details -->
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <img id="modalPoster" src="" alt="Movie Poster">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <a href="#" class="play-btn" id="modalPlayBtn">▶ Play</a>
+        </div>
+    </div>
+
+    <!-- Trailer Modal -->
+    <div class="modal" id="trailerModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeTrailer">&times;</button>
+            <video id="trailerVideo" controls autoplay style="width:100%; border-radius:8px;">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
